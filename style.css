@@ -10,7 +10,7 @@
     --body-font: 'Jost', sans-serif;
 }
 
-/* Reset & Fix for Overflow */
+/* Reset & Mobile Overflow Fix */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@
 }
 
 html, body {
-    overflow-x: hidden; /* Very Important: Prevents horizontal scrolling */
+    overflow-x: hidden; /* Extra white space ko hide karne ke liye */
     width: 100%;
     scroll-behavior: smooth;
     font-family: var(--body-font);
@@ -50,7 +50,7 @@ html, body {
 .loader-content {
     text-align: center;
     padding: 0 15px;
-    width: 100%; /* Fix width */
+    width: 100%;
 }
 
 .loader-logo {
@@ -97,7 +97,7 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    overflow: hidden; /* Prevents container from overflowing */
+    overflow: hidden; 
 }
 
 .text-center {
@@ -166,7 +166,7 @@ header {
     cursor: pointer;
 }
 
-/* Hero Section */
+/* Hero Section (Banner Zoom Issue Fixed) */
 .hero {
     min-height: 100vh;
     position: relative;
@@ -174,7 +174,8 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('hero-bg.jpg') center/cover no-repeat;
+    /* Yahan se 'fixed' hata diya gaya hai jisse photo mobile par zoom nahi hogi */
+    background: url('hero-bg.jpg') center center/cover no-repeat;
     padding: 100px 20px 40px;
     width: 100%;
 }
@@ -193,7 +194,7 @@ header {
     z-index: 1;
     max-width: 850px;
     color: var(--white);
-    width: 100%; /* Important for centering */
+    width: 100%;
 }
 
 .subtitle {
@@ -260,12 +261,12 @@ header {
     margin-bottom: 40px;
 }
 
-/* Fluid Responsive Grid for All Devices */
+/* Fluid Responsive Grid */
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    width: 100%; /* Ensures grid takes full width of container */
+    width: 100%;
 }
 
 /* Services */
@@ -275,7 +276,7 @@ header {
     transition: transform 0.3s ease;
     border-radius: 8px;
     overflow: hidden;
-    width: 100%; /* Fixes card sizing */
+    width: 100%;
 }
 
 .service-card:hover {
@@ -309,7 +310,7 @@ header {
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     height: 320px;
-    width: 100%; /* Fixes image overflow */
+    width: 100%;
 }
 
 .gallery-wrapper img {
@@ -522,7 +523,7 @@ header {
 
 @media (max-width: 480px) {
     .grid-layout {
-        grid-template-columns: 1fr; /* Force 1 column on very small screens */
+        grid-template-columns: 1fr;
     }
 
     .gallery-wrapper {
@@ -530,7 +531,7 @@ header {
     }
 
     .btn-primary {
-        width: 100%; /* Full width button on mobile */
+        width: 100%; 
         padding: 14px 20px;
     }
 }
