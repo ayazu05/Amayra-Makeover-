@@ -1,21 +1,50 @@
-
 // 1. Preloader Animation
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
-    setTimeout(() => {
-        preloader.classList.add('loaded');
-    }, 1500); // 1.5 seconds delay
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('loaded');
+        }, 1200);
+    }
 });
 
-// 2. Scroll Reveal Animation
+// 2. Mobile Menu Toggle & Auto Close
 document.addEventListener("DOMContentLoaded", function() {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    if (menuBtn && navMenu) {
+        menuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
+
+        // Close menu when a link is tapped
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = menuBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+            });
+        });
+    }
+
+    // 3. Scroll Reveal Animation
     const reveals = document.querySelectorAll(".reveal");
 
     function reveal() {
         for (let i = 0; i < reveals.length; i++) {
             let windowHeight = window.innerHeight;
             let elementTop = reveals[i].getBoundingClientRect().top;
-            let elementVisible = 120;
+            let elementVisible = 80;
 
             if (elementTop < windowHeight - elementVisible) {
                 reveals[i].classList.add("active");
@@ -24,5 +53,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     window.addEventListener("scroll", reveal);
-    reveal();
+    reveal(); // Trigger once on load
 });
