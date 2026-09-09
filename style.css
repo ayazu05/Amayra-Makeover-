@@ -10,7 +10,7 @@
     --body-font: 'Jost', sans-serif;
 }
 
-/* Reset & Mobile Overflow Fix */
+/* Reset & Fix for Overflow */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@
 }
 
 html, body {
-    overflow-x: hidden; /* Extra white space ko hide karne ke liye */
+    overflow-x: hidden;
     width: 100%;
     scroll-behavior: smooth;
     font-family: var(--body-font);
@@ -166,7 +166,7 @@ header {
     cursor: pointer;
 }
 
-/* Hero Section (Banner Zoom Issue Fixed) */
+/* Hero Section */
 .hero {
     min-height: 100vh;
     position: relative;
@@ -174,8 +174,11 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Yahan se 'fixed' hata diya gaya hai jisse photo mobile par zoom nahi hogi */
-    background: url('hero-bg.jpg') center center/cover no-repeat;
+    background-color: #1a1a1a;
+    background-image: url('hero-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 100px 20px 40px;
     width: 100%;
 }
@@ -480,6 +483,12 @@ header {
 }
 
 @media (max-width: 768px) {
+    /* Hero Banner Mobile Adjustment */
+    .hero {
+        min-height: 60vh; /* Reduces extreme zooming on tall mobile screens */
+        background-position: center 25%; /* Keeps faces/top part of image in view */
+    }
+
     .menu-toggle {
         display: block;
     }
