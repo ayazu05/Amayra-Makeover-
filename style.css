@@ -1,4 +1,3 @@
-
 /* Variables */
 :root {
     --gold: #D4AF37;
@@ -169,7 +168,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('images/hero-bg.jpg') center/cover fixed; /* Using local image */
+    background: url('hero-bg.jpg') center/cover fixed; /* DIRECT IMAGE PATH */
 }
 
 .hero-overlay {
