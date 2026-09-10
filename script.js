@@ -1,4 +1,3 @@
-
 // 1. Preloader Animation
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
@@ -38,29 +37,22 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 3. Hairstyles Swiper Slider (Swipe + Auto Loop)
+    // ===============================================
+    // 3. Hairstyles Swiper Slider (Continuous Square Marquee)
+    // ===============================================
     if (typeof Swiper !== 'undefined') {
         const hairSwiper = new Swiper(".hairSwiper", {
-            slidesPerView: "auto",
-            spaceBetween: 20,
-            loop: true,
-            grabCursor: true, // Hand icon for swiping
+            spaceBetween: 20,           // Boxes ke beech ka gap
+            centeredSlides: false,
+            speed: 3500,                // Bahut smooth continuous speed
             autoplay: {
-                delay: 2000,
-                disableOnInteraction: false, // Keeps sliding even after user touches it
+                delay: 0,               // Zero delay se slider rukega nahi
+                disableOnInteraction: false, // Touch karne par bhi chalta rahega
             },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1.2,
-                    spaceBetween: 15,
-                    centeredSlides: true
-                },
-                500: {
-                    slidesPerView: "auto",
-                    spaceBetween: 20,
-                    centeredSlides: false
-                }
-            }
+            loop: true,                 // Infinite loops
+            slidesPerView: "auto",      // Kitni screen hai us hisaab se boxes dikhayega
+            allowTouchMove: true,       // User swipe bhi kar sakta hai
+            grabCursor: true            // Hand icon aayega
         });
     }
 
