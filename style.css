@@ -1,3 +1,4 @@
+
 /* Variables */
 :root {
     --gold: #D4AF37;
@@ -10,7 +11,7 @@
     --body-font: 'Jost', sans-serif;
 }
 
-/* Reset & Fix for Overflow */
+/* Reset & Mobile Overflow Fix */
 * {
     margin: 0;
     padding: 0;
@@ -307,6 +308,33 @@ header {
     margin-bottom: 8px;
 }
 
+/* --- HAIRSTYLES SWIPER SLIDER --- */
+.hairSwiper {
+    width: 100%;
+    padding: 20px 0 40px;
+}
+
+.hairSwiper .swiper-slide {
+    width: 280px; /* Fixed width for better swipe feel */
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: var(--white);
+    transition: transform 0.3s ease;
+}
+
+.hairSwiper .swiper-slide:hover {
+    transform: scale(1.03);
+}
+
+.hairSwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Galleries */
 .gallery-wrapper {
     overflow: hidden;
@@ -385,7 +413,7 @@ header {
 
 .contact-box {
     padding: 24px 20px;
-    background: var(--light);
+    background: var(--white);
     border: 1px solid #EAEAEA;
     border-radius: 8px;
     transition: all 0.3s;
@@ -471,7 +499,7 @@ header {
     transform: translateY(0);
 }
 
-/* --- RESPONSIVE BREAKPOINTS (Tablets & Mobile) --- */
+/* --- RESPONSIVE BREAKPOINTS --- */
 @media (max-width: 992px) {
     .contact-wrapper {
         grid-template-columns: 1fr;
@@ -483,10 +511,9 @@ header {
 }
 
 @media (max-width: 768px) {
-    /* Hero Banner Mobile Adjustment */
     .hero {
-        min-height: 60vh; /* Reduces extreme zooming on tall mobile screens */
-        background-position: center 25%; /* Keeps faces/top part of image in view */
+        min-height: 60vh; 
+        background-position: center 25%;
     }
 
     .menu-toggle {
@@ -507,7 +534,7 @@ header {
     }
 
     nav.active {
-        max-height: 350px;
+        max-height: 380px;
     }
 
     .nav-links {
@@ -527,6 +554,11 @@ header {
         width: 48px;
         height: 48px;
         font-size: 24px;
+    }
+    
+    .hairSwiper .swiper-slide {
+        width: 250px;
+        height: 320px;
     }
 }
 

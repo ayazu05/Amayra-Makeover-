@@ -1,3 +1,4 @@
+
 // 1. Preloader Animation
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
@@ -37,7 +38,33 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 3. Scroll Reveal Animation
+    // 3. Hairstyles Swiper Slider (Swipe + Auto Loop)
+    if (typeof Swiper !== 'undefined') {
+        const hairSwiper = new Swiper(".hairSwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            loop: true,
+            grabCursor: true, // Hand icon for swiping
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false, // Keeps sliding even after user touches it
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 15,
+                    centeredSlides: true
+                },
+                500: {
+                    slidesPerView: "auto",
+                    spaceBetween: 20,
+                    centeredSlides: false
+                }
+            }
+        });
+    }
+
+    // 4. Scroll Reveal Animation
     const reveals = document.querySelectorAll(".reveal");
 
     function reveal() {

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amayra Makeover | Premium Bridal & Mehndi</title>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -30,6 +32,7 @@
             <ul class="nav-links">
                 <li><a href="#home" class="nav-item">Home</a></li>
                 <li><a href="#services" class="nav-item">Services</a></li>
+                <li><a href="#hairstyles" class="nav-item">Hairstyles</a></li>
                 <li><a href="#mehndi" class="nav-item">Mehndi</a></li>
                 <li><a href="#portfolio" class="nav-item">Portfolio</a></li>
                 <li><a href="#reviews" class="nav-item">Reviews</a></li>
@@ -88,8 +91,36 @@
         </div>
     </section>
 
+    <!-- Hairstyles Slider Section -->
+    <section id="hairstyles" class="hairstyles section-padding bg-light">
+        <div class="container text-center reveal">
+            <h2 class="section-title">Bridal Hair Inspirations</h2>
+            <div class="title-separator"></div>
+            <p class="section-subtitle">Swipe to explore our stunning hair styling masterpieces</p>
+            
+            <!-- Swiper Container -->
+            <div class="swiper hairSwiper mt-4">
+                <div class="swiper-wrapper">
+                    <!-- 12 Images Loop from 'hairs' folder -->
+                    <div class="swiper-slide"><img src="hairs/1.jpg" alt="Hairstyle 1"></div>
+                    <div class="swiper-slide"><img src="hairs/2.jpg" alt="Hairstyle 2"></div>
+                    <div class="swiper-slide"><img src="hairs/3.jpg" alt="Hairstyle 3"></div>
+                    <div class="swiper-slide"><img src="hairs/4.jpg" alt="Hairstyle 4"></div>
+                    <div class="swiper-slide"><img src="hairs/5.jpg" alt="Hairstyle 5"></div>
+                    <div class="swiper-slide"><img src="hairs/6.jpg" alt="Hairstyle 6"></div>
+                    <div class="swiper-slide"><img src="hairs/7.jpg" alt="Hairstyle 7"></div>
+                    <div class="swiper-slide"><img src="hairs/8.jpg" alt="Hairstyle 8"></div>
+                    <div class="swiper-slide"><img src="hairs/9.jpg" alt="Hairstyle 9"></div>
+                    <div class="swiper-slide"><img src="hairs/10.jpg" alt="Hairstyle 10"></div>
+                    <div class="swiper-slide"><img src="hairs/11.jpg" alt="Hairstyle 11"></div>
+                    <div class="swiper-slide"><img src="hairs/12.jpg" alt="Hairstyle 12"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Mehndi Designs Section -->
-    <section id="mehndi" class="portfolio section-padding bg-light">
+    <section id="mehndi" class="portfolio section-padding">
         <div class="container text-center reveal">
             <h2 class="section-title">Exquisite Mehndi Designs</h2>
             <div class="title-separator"></div>
@@ -104,7 +135,7 @@
     </section>
 
     <!-- Makeup Portfolio Section -->
-    <section id="portfolio" class="portfolio section-padding">
+    <section id="portfolio" class="portfolio section-padding bg-light">
         <div class="container text-center reveal">
             <h2 class="section-title">Makeup Masterpieces</h2>
             <div class="title-separator"></div>
@@ -118,7 +149,7 @@
     </section>
 
     <!-- Client Testimonials -->
-    <section id="reviews" class="reviews section-padding bg-light">
+    <section id="reviews" class="reviews section-padding">
         <div class="container text-center reveal">
             <h2 class="section-title">What Our Brides Say</h2>
             <div class="title-separator"></div>
@@ -153,7 +184,7 @@
     </section>
 
     <!-- Contact & Map -->
-    <section id="contact" class="contact section-padding">
+    <section id="contact" class="contact section-padding bg-light">
         <div class="container text-center reveal">
             <h2 class="section-title">Get in Touch</h2>
             <div class="title-separator"></div>
@@ -198,6 +229,8 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
