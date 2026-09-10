@@ -1,3 +1,4 @@
+
 /* Variables */
 :root {
     --gold: #D4AF37;
@@ -51,40 +52,24 @@ html, body {
     text-align: center;
     padding: 0 15px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.loader-img {
-    height: 80px;
-    margin-bottom: 10px;
+/* Updated Loader Image to show ONLY large logo */
+.loader-img-large {
+    width: clamp(250px, 40vw, 400px); /* Bada logo size */
+    height: auto;
+    object-fit: contain;
     opacity: 0;
-    animation: fadeInScale 1.5s ease forwards;
-}
-
-.loader-logo {
-    font-family: var(--heading-font);
-    font-size: clamp(1.4rem, 4vw, 2.5rem);
-    color: var(--gold);
-    letter-spacing: 2px;
-    opacity: 0;
-    animation: fadeInScale 2s ease forwards;
-}
-
-.loader-line {
-    width: 0;
-    height: 2px;
-    background: var(--gold);
-    margin: 10px auto 0;
-    animation: lineGrow 2s ease forwards;
+    animation: fadeInScale 2.5s ease forwards; /* Smooth animation */
 }
 
 @keyframes fadeInScale {
     0% { opacity: 0; transform: scale(0.9); }
     100% { opacity: 1; transform: scale(1); }
-}
-
-@keyframes lineGrow {
-    0% { width: 0; }
-    100% { width: 80px; }
 }
 
 /* Typography & Layout */
@@ -598,7 +583,6 @@ header {
         font-size: 24px;
     }
     
-    /* Mobile par logo ki size chhoti karne ke liye */
     .site-logo {
         height: 35px;
     }

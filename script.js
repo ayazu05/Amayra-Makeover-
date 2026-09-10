@@ -1,10 +1,11 @@
+
 // 1. Preloader Animation
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
     if (preloader) {
         setTimeout(() => {
             preloader.classList.add('loaded');
-        }, 1200);
+        }, 1800); // Thoda time badhaya taaki bada logo dhyan se dikhe
     }
 });
 
@@ -42,17 +43,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // ===============================================
     if (typeof Swiper !== 'undefined') {
         const hairSwiper = new Swiper(".hairSwiper", {
-            spaceBetween: 20,           // Boxes ke beech ka gap
+            spaceBetween: 20,           
             centeredSlides: false,
-            speed: 3500,                // Bahut smooth continuous speed
+            speed: 3500,                
             autoplay: {
-                delay: 0,               // Zero delay se slider rukega nahi
-                disableOnInteraction: false, // Touch karne par bhi chalta rahega
+                delay: 0,               
+                disableOnInteraction: false, 
             },
-            loop: true,                 // Infinite loops
-            slidesPerView: "auto",      // Kitni screen hai us hisaab se boxes dikhayega
-            allowTouchMove: true,       // User swipe bhi kar sakta hai
-            grabCursor: true            // Hand icon aayega
+            loop: true,                 
+            slidesPerView: "auto",      
+            allowTouchMove: true,       
+            grabCursor: true            
         });
     }
 
